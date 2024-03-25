@@ -1,0 +1,162 @@
+:root{
+  /* colors */
+  --yellow: hsl(35, 100%, 55%);
+  --grayish-blue: hsl(300, 1%, 20%);
+  --light-grey: hsl(300, 1%, 30%);
+  
+  --Dark-grayish-blue: hsl(300, 2%, 12%);
+  --white: hsl(0, 0%, 100%);
+  /* fonts */
+  --ff: "Roboto", sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold:  700;
+  --fs-display: 2.5rem;
+  --fs-fixed: 2rem
+}
+
+
+/* global CSS */
+
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+}
+
+img, canvas, video, picture, figure{
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+button, textarea, select, option, input{
+  font: inherit;
+}
+ button{
+  display: block;
+ }
+body{
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+body{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff);
+  font-size: var(--fs-fixed);
+  padding: 1rem;
+}
+main{
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.btn-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+  background-color: var(--Dark-grayish-blue);
+  padding: 1.5rem;
+}
+
+.add, .sub, .mult, .divi, .clr{
+  grid-column-start: 1;
+  background-color: var(--yellow);
+}
+
+.nine{
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+.eight{
+  grid-row-start: 1;
+  grid-column-start: 3;
+}
+.seven{
+  grid-row-start: 1;
+  grid-column-start: 4;
+}
+.six{
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+.five{
+  grid-row-start: 2;
+  grid-column-start: 3;
+}
+.four{
+  grid-row-start: 2;
+  grid-column-start: 4;
+}
+.three{
+  grid-row-start: 3;
+  grid-column-start: 2;
+}
+.two{
+  grid-row-start: 3;
+  grid-column-start: 3;
+}
+.one{
+  grid-row-start: 3;
+  grid-column-start: 4;
+}
+.zero{
+  grid-row-start: 4;
+  grid-column-start: 2;
+}
+
+.dot{
+  grid-row-start: 4;
+  grid-column-start: 3;
+}
+.equal-to{
+  grid-row-start: 4;
+  grid-column-start: 4;
+}
+
+button{
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  border: none;
+  color: var(--white);
+  background-color: var(--light-grey);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  button{
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.btn:hover{
+  background-color: var(--grayish-blue);
+}
+
+.display{
+  background-color: var(--grayish-blue);
+  
+  padding: 1.5rem
+}
+
+.input{
+  color: var(--white);
+  font-size: var(--fs-display);
+  font-weight: var(--fw-bold);
+  width: 100%;
+  background-color: var(--grayish-blue);
+  border: none;
+  outline: none;
+}
